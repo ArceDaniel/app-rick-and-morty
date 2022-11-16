@@ -1,0 +1,17 @@
+.conteiner{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: auto;
+    height: auto;
+    position: relative;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
