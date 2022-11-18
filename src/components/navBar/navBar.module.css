@@ -1,21 +1,22 @@
 .conteiner{
-    background-color: #212121;
+    background-color: rgba(21, 21, 21, 0.99);
     padding-bottom: 20px;
     padding-top: 20px;
     width: 100%;
-    z-index: 1;
-}
-.buttonConteiner{
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
+    margin-left: 0px;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    border-radius: 12px;
+    opacity: inherit;
 }
 
+
 .button {
+    width: 130px;
+    height: 40px;
     z-index: 1;
-    font-size: 12px;
+    font-size: 14px;
     position: relative;
     padding: 10px 10px;
     outline: none;
@@ -109,5 +110,21 @@
     transition: none;
     transition-delay: none;
    }
+
+   .input {
+    color: #8707ff;
+    font-size: 15px;
+    border: 2px solid #8707ff;
+    border-radius: 20px;
+    padding: 10px 25px;
+    background: transparent;
+    max-width: 190px;
+    margin-right: 1em;
+    height: 16px;
+   }
+
+
+.input:active {
+    box-shadow: 2px 2px 15px #8707ff inset;
+   }
    
-  

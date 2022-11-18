@@ -1,17 +1,16 @@
 .conteiner{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 4%;
+    margin-right: 4%;
     margin-top: 5%;
     margin-bottom: 5%;
-    width: auto;
+    width: 90%;
     height: auto;
-    position: relative;
     place-content: center;
     place-items: center;
     overflow: hidden;
-    flex-direction: row;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 80px 80px;
     grid-template-rows: 1fr 1fr;
+    justify-content: space-evenly;
 
 }

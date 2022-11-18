@@ -5,10 +5,13 @@ body {
    background-attachment: fixed;
    background-position: center center;
    background-size: cover;
-   padding-bottom: 0px;
-   margin-bottom: 0px;
    width: 100%;
    box-sizing: border-box;
+   justify-content: center;
+   justify-items: center;
+   margin: 0px;
+   padding: 0px;
 }
+
 
 
