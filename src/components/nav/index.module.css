@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+.conteiner{
+    background-color: rgba(21, 21, 21, 0.99);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    margin-left: 0px;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    border-radius: 12px;
+    opacity: inherit;
+    
+}
+.about{
+    color: rgb(210, 183, 236);
+    font-family: 'Rubik Glitch', cursive;
+    font-size: 600;
+    display: inline;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-decoration: none;
+    justify-content: left;
+}
