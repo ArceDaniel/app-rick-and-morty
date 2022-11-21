@@ -1,5 +1,5 @@
-import Card from './Card';
-import style from '../styles/conteinerCards.module.css'
+import Card from '../Card/Card.jsx';
+import style from './index.module.css'
 
 export default function Cards({onClose, characters}) {
    

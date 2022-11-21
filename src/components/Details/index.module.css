@@ -1,10 +1,16 @@
 .card {
     width: 80%;
     height: 100%;
+    margin-top: 80px;
     transition: all .3s;
-    position: relative;
     border-radius: .5rem 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    color: aliceblue;
+
   }
   
   .card:hover {
@@ -13,10 +19,8 @@
   
   .img {
     transition: all .3s;
-    background: #ff0084;
-    background: -webkit-linear-gradient(to right, #33001b, #ff0084);
-    background: linear-gradient(to right, #33001b, #ff0084);
     width: 100%;
+    border-radius: .5rem ;
   }
   
   .img:hover {
@@ -31,18 +35,12 @@
   }
   
   .description {
-    position: absolute;
-    bottom: .5rem;
-    left: .5rem;
-    text-align: start;
+    text-align: center;
     padding: .5rem 1em;
     width: 90%;
     transition: all 0.5s ease;
     text-overflow: ellipsis;
-    white-space: nowrap;
     backdrop-filter: blur(.1rem);
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: .5rem 2rem;
   }
   
   .description:hover {

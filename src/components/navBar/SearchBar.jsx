@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import style from './navBar.module.css'
 
 export default function SearchBar({onSearch}) {
+   const navigate = useNavigate();
    const [id, setId] = useState('');
    const handleChange = (e) => {
       const { value } = e.target;
@@ -13,7 +15,8 @@ export default function SearchBar({onSearch}) {
          id='inputSearch'
          className= {style.input} 
          placeholder="buscar por ID..."/>
-      <button onClick={(e)=>{
+      <button onClick={()=>{
+         navigate('/home')
          document.getElementById('inputSearch').value = '';
          onSearch(id);
       }} 

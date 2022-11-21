@@ -4,6 +4,7 @@ import style from './index.module.css'
 
 export default function Details(){
     const { id } = useParams();
+    console.log(id)
     const [character, setCharacter] = useState({});
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/${id}`)
@@ -20,10 +21,19 @@ export default function Details(){
            });
         return setCharacter({});
      }, [id]);
-    
+    console.log(character)
     return (
+      <div className={style.card}>
         <div>
-            <img src={character.image} alt={character.name} />
+          <img src={character.image} alt={character.name} className={style.img} />
         </div>
+        <div className={style.descrition}>
+          <h2>{character.name}</h2>   
+          <h2>Origen: {character.origin?.name}</h2>
+          <h2>Especie: {character.species}</h2>
+          <h2>Estado: {character.status}</h2>
+          <h2>Genero: {character.gender}</h2>
+        </div>
+      </div>
     )
 }

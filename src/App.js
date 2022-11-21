@@ -1,10 +1,11 @@
 import './App.css'
-import Cards from './components/Cards.jsx'
-import Nav from './components/nav/nav'
-import About from './components/About/About'
-import Details from './components/Details/Details'
-import { useState } from 'react'
-import { Route, Routes} from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import Cards from './components/Cards/Cards.jsx'
+import Nav from './components/nav/nav.jsx'
+import About from './components/About/About.jsx'
+import Details from './components/Details/Details.jsx'
+import Forms from './components/forms/forms.jsx'
 
 
 function App () {
@@ -28,17 +29,38 @@ function App () {
   const onClose = async (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
+  const location = useLocation();
+  // location = { pathname: url }
+
+  const navigate = useNavigate();
+  const [access, setAccess] = useState(false);
+  const username = "ejemplo@gmail.com";
+  const password = "1password";
+
+  function login(userData) {
+    if (userData.password === password && userData.username === username) {
+      setAccess(true);
+      navigate("/home");
+    }
+  }
+
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
   
 
   return (
     <div className='App'>
-        <Nav onSearch = {onSearch}/>
-        <Routes>
-          <Route path='/' element = {  <Cards characters={characters} onClose={onClose} />} />
-          <Route path='/about' element = {  <About />} />
-          <Route path='/details/:id' element = {  <Details />} />
-        </Routes>
-      
+           {location.pathname !== "/" && <Nav onSearch={onSearch} />}
+      <Routes>
+        <Route path="/" element={<Forms login={login} />} />
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        />
+        <Route path="/about" element={<About />} />
+        <Route path="/details/:id" element={<Details />} />
+      </Routes>
     </div>
   )
 }
