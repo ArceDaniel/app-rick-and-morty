@@ -22,4 +22,11 @@
     margin-right: 40px;
     text-decoration: none;
     justify-content: left;
+    
 }
+.about:hover {
+    transform: scale(1.03);
+    box-shadow: none;
+    font-size: 800;
+    color: rgb(255, 255, 255);
+  }

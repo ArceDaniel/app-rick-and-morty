@@ -6,6 +6,7 @@ import Nav from './components/nav/nav.jsx'
 import About from './components/About/About.jsx'
 import Details from './components/Details/Details.jsx'
 import Forms from './components/forms/forms.jsx'
+import Favorite from './components/favorite/favorite';
 
 
 function App () {
@@ -30,12 +31,12 @@ function App () {
     setCharacters(characters.filter((char) => char.id !== id));
   };
   const location = useLocation();
-  // location = { pathname: url }
+  //location = { pathname: url }
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
-  const username = "ejemplo@gmail.com";
-  const password = "1password";
+  const username = "example@gmail.com";
+  const password = "password1";
 
   function login(userData) {
     if (userData.password === password && userData.username === username) {
@@ -59,6 +60,7 @@ function App () {
           element={<Cards characters={characters} onClose={onClose} />}
         />
         <Route path="/about" element={<About />} />
+        <Route path="/favorite" element={<Favorite />} />
         <Route path="/details/:id" element={<Details />} />
       </Routes>
     </div>

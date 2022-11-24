@@ -10,7 +10,7 @@ export default function SearchBar({onSearch}) {
       setId(value)
    }
    return (
-      <>
+      <div className={style.conteiner}>
          <input onChange={handleChange}
          id='inputSearch'
          className= {style.input} 
@@ -21,6 +21,6 @@ export default function SearchBar({onSearch}) {
          onSearch(id);
       }} 
       className={style.button}>Agregar</button>
-      </>
+      </div>
    );
 }

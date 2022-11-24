@@ -7,6 +7,17 @@
     border-radius: 10px;
     box-shadow: 10px 10px 20px 20px #310145b8;
    }
+.data {
+    color: #d3d3d3;
+    width:20em;
+    padding: 1.9rem 1.2rem;
+    text-align: center;
+    background: #2a2b38;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 20px #310145b8;
+    position:absolute;
+    left: 2px;
+   }
    
    .img{
     margin-top: 2em;
@@ -39,6 +50,7 @@
     width: 100%;
     height: 2em;
     color: #d3d3d3;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    }
    
    /*Text*/
@@ -62,6 +74,7 @@
     color: #5e6681;
     box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
     transition: all .3s ease-in-out;
+
    }
    
    .btnLink {
