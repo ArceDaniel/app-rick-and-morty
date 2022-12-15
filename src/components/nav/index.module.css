@@ -7,7 +7,7 @@
     cursor: pointer;
     display: inline-block;
     justify-items: center;
-    z-index: 2;
+    z-index: 3;
   }
   .navIcon span{
     background-color:#878787;
@@ -68,6 +68,7 @@
     left: 0;
     width: 80%;
     height: 100vh;
+    z-index: 3;
   }
 
   .links{
@@ -79,12 +80,13 @@
     margin-right: auto;
     text-align: center;
     transition: all .5s ease;
+    
     }
     .links.active{
         height: auto;
         display: block;
         position: absolute;
-     
+        z-index: 3;
         top: 90px;
         left:10px;
         text-align: left;
@@ -112,6 +114,7 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
+    justify-items: center;
 }
 .about{
     color: #bfbfbf;

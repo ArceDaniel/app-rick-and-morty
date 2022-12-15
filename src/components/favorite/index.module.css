@@ -15,6 +15,7 @@
 }
 .main{
     display: flex;
+    height: 10px;
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 15px;
@@ -23,13 +24,12 @@
     justify-content: flex-start;
     padding-bottom: 15px;
     position: fixed;
-    top: 15%;
     z-index: 2;
-  
-
+    top: 15%;
 }
 .selected{
     background-color: rgba(21, 21, 21, 0.99);;
     color: white;
     font-size: 20px;
+    display: flex;
 }
