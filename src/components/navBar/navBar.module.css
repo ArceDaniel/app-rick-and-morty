@@ -7,7 +7,7 @@
 .button {
     width: 7em;
     height: 40px;
-    z-index: 1;
+    margin-left: 1em;
     font-size: 14px;
     position: relative;
     padding: 10px 10px;
@@ -120,14 +120,14 @@
     box-shadow: 2px 2px 15px #8707ff inset;
    }
    
-@media (max-width: 370px) {
+@media (max-width: 400px) {
     .conteiner{
         justify-content: center;
     }
    .input{
-    width: 7em;
+    width: 6em;
     }
     .button{
-    width: 6em;
+    width: 5em;
     }
 }

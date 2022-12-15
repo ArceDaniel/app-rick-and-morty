@@ -11,6 +11,7 @@ export default function Nav({onSearch}) {
   }
   const goto = (e)=>{
     const GO = e.target.innerText || e.target.id
+    console.log('hola')
      navigate(`/${GO}`)
      setClicked(false)
   }
@@ -23,19 +24,21 @@ export default function Nav({onSearch}) {
            <span></span>
            <span></span>
         </div>
-        <div className={`${style.links} ${clicked ? style.active : ''}`}>
+        <div  onClick={goto} className={`${style.links} ${clicked ? style.active : ''}`}>
         <div className={style.about}>
         <h2 className={style.about} id='about' onClick={goto}>About</h2>
         </div>
         <div className={style.about}>
         <h2 className={style.about} id='Favorite' onClick={goto}>Favorite</h2>
         </div>
-        <div className={style.about}>
+        <div className={style.about} >
         <h2 className={style.about} onClick={goto}>Home</h2>
         </div>
         </div>
-     
-        <SearchBar onSearch={onSearch} />
+
+        <SearchBar
+         clicked = {clicked}
+         onSearch={onSearch} />
       </div>
     );
  }
