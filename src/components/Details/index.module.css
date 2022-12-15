@@ -8,8 +8,8 @@
     box-shadow: 0px 15px 20px -5px rgba(0, 0, 0, 0.5);
     margin-left: 10%;
     margin-right: 10%;
-    display: flex;
     color: aliceblue;
+    display: flex;
 
   }
   
@@ -40,7 +40,6 @@
     width: 90%;
     transition: all 0.5s ease;
     text-overflow: ellipsis;
-    backdrop-filter: blur(.1rem);
   }
   
   .description:hover {
@@ -52,3 +51,22 @@
     color: aliceblue;
   }
 
+  @media (max-width: 550px) {
+    .imgContainer{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      height: auto;
+    }
+    .img{
+      width: 50%;
+    }
+    .img:hover {
+      transform: none;
+      margin-top: 1em;
+    }
+    .card{
+      display:block;
+      border-radius: 2em;
+    }
+  }

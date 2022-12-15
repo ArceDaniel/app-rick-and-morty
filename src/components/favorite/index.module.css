@@ -1,7 +1,7 @@
 .conteiner{
     margin-left: 4%;
     margin-right: 4%;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 5%;
     width: 90%;
     height: auto;
@@ -24,7 +24,8 @@
     padding-bottom: 15px;
     position: fixed;
     top: 15%;
-    z-index: 1;
+    z-index: 2;
+  
 
 }
 .selected{
