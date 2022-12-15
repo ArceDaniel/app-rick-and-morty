@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { bubbleSort, bubbleSortnt } from "./helpers";
 
 const initialState = {
     favorites: [],
@@ -24,21 +23,18 @@ const chartSlice = createSlice({
            
         },
         filterCards(state, action){
-            const newState = state.favorites.filter(fav =>
-                fav.gender === action.payload
-               )
-            state.filter = newState;
+        
+            const filterCopy = [...state.favorites]
+            let filtrado = filterCopy.filter(e => e.gender === action.payload)
+            if(action.payload === "All") filtrado = filterCopy;
+            state.filter = filtrado;
+
         },
-        orderCards(state, action){
-            let newState = []
-            if(action.payload){
-                newState = bubbleSort(state.filter )
-                state.filter = newState
-            }else{
-                newState = bubbleSortnt(state.filter )
-                state.filter = newState
-            }
-          
+        orderCards(state, { payload }){
+            if(payload === 'Descendente') 
+                state.filter = state.filter.sort((a,b)=> a.id - b.id)
+            if(payload === 'Ascendente') 
+                state.filter = state.filter.sort((a,b)=> b.id - a.id)
         }
 
     }

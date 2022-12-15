@@ -4,8 +4,10 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 20px;
-    width: 300px;
+    max-width: 300px;
+    width: 80%;
     height: 400px;
+   
     background: #07182E;
     position: relative;
     display: flex;
@@ -68,7 +70,6 @@
     content: '';
     position: absolute;
     background: #07182E;
-    ;
     inset: 5px;
     border-radius: 15px;
   }  
@@ -183,4 +184,8 @@
     transition-delay: none;
    }
    
-  
+   @media(max-width: 320px){
+    .card img{
+      height: 50%;
+    }
+  }

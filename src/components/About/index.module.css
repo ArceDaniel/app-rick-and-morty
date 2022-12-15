@@ -1,0 +1,136 @@
+
+:root {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
+    --bg-black-50: #393939;
+    --text-black-900: #ffffff;
+    --text-black-700: #e9e9e9;
+  }
+.container {
+    height: 90%;
+    width: 90%;
+    margin-top: 2em;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.696);
+    border-radius: 15px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: flex-start;
+  }
+  .title h2{
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+    position: fixed;
+    display: flex;
+  }
+  .title h2::before{
+    content: " ";
+    height: 4px;
+    width: 70px;
+    background-color: #ae00ff;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .aboutContent {
+      margin-top: 10px;
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    
+  .aboutText {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    
+   .aboutText h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: var(--text-black-900);
+      font-family: Montserrat,sans-serif;
+    }
+    
+  .aboutText h3 span {
+      margin-left: 15px;
+      color:  #ae00ff;
+    }
+    
+  .aboutText p {
+    font-size: 1em;
+    line-height: 25px;
+    color: var(--text-black-700);
+    padding: 10px;
+    font-family: Noto Sans Mono,monospace;
+  }
+ 
+  .iconLikedin{
+    background-image: url('../../img/linkedin-logo.png');
+    background-size: 100%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 30px 10px;
+    text-align:center;
+    cursor: pointer;
+  }
+  .iconLikedin:hover{
+    transform: scale(1.1);
+  }
+  .iconGit:hover{
+    transform: scale(1.1);
+  }
+  .iconCv:hover{
+    transform: scale(1.1);
+  }
+  .iconGit{
+    background-image: url('../../img/github.png');
+    background-size: 100%;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    display: block;
+    margin: 30px 10px;
+    text-align:center;
+    cursor: pointer;
+    margin-left: 3em;
+  }
+  
+  .iconCv{
+    background-image: url('../../img/cv.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 60px;
+    width: 60px;
+    display: block;
+    margin: 30px 10px;
+    text-align:center;
+    cursor: pointer;
+    margin-left: 3em;
+  }
+  .homeIcons{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    right:7em;
+    margin-top: 3em;
+    max-width: 100%;
+    justify-content: center;
+  }

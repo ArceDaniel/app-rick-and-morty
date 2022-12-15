@@ -1,5 +1,6 @@
 .card {
-    width:20em;
+    width: 90vh;
+    max-width:320px;
     height: 25em;
     padding: 1.9rem 1.2rem;
     text-align: center;
@@ -8,15 +9,15 @@
     box-shadow: 10px 10px 20px 20px #310145b8;
    }
 .data {
+    width: 90vh;
+    max-width:320px;
     color: #d3d3d3;
-    width:20em;
-    padding: 1.9rem 1.2rem;
     text-align: center;
-    background: #2a2b38;
+    background: #2a2b38ca;
     border-radius: 10px;
-    box-shadow: 10px 10px 20px 20px #310145b8;
-    position:absolute;
-    left: 2px;
+    box-shadow: 10px 10px 20px 20px #3101454f;
+    position: fixed;
+    top: 0px;
    }
    
    .img{

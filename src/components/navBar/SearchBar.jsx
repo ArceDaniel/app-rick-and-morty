@@ -1,9 +1,7 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import style from './navBar.module.css'
 
 export default function SearchBar({onSearch}) {
-   const navigate = useNavigate();
    const [id, setId] = useState('');
    const handleChange = (e) => {
       const { value } = e.target;
@@ -11,16 +9,19 @@ export default function SearchBar({onSearch}) {
    }
    return (
       <div className={style.conteiner}>
-         <input onChange={handleChange}
-         id='inputSearch'
-         className= {style.input} 
-         placeholder="buscar por ID..."/>
-      <button onClick={()=>{
-         navigate('/home')
-         document.getElementById('inputSearch').value = '';
+         <form onSubmit={(e)=>{
+         e.preventDefault();
          onSearch(id);
-      }} 
-      className={style.button}>Agregar</button>
+         setId('')
+      }} >
+         <input onChange={handleChange}
+         value={id}
+         className = {style.input} 
+         placeholder="Search by ID..."/>
+      <button 
+      type='submit'
+      className={style.button}>add</button>
+      </form>
       </div>
    );
 }

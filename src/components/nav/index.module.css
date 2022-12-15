@@ -1,32 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+.navIcon{
+    width: 37px;
+    height: 30px;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    justify-items: center;
+    z-index: 2;
+  }
+  .navIcon span{
+    background-color:#878787;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+    transition-duration: 500ms
+  }
+  .navIcon span:nth-child(1){
+    top:0px;
+    left: 0px;
+  }
+  .navIcon span:nth-child(2){
+    top:13px;
+    left: 0px;
+    opacity:1;
+  }
+  .navIcon span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+  }
+  .navIcon:not(.open):hover span:nth-child(1){
+    transform: rotate(0deg) scaleY(1.1);
+  }
+  .navIcon:not(.open):hover span:nth-child(2){
+    transform: rotate(0deg) scaleY(1.1);
+  }
+  .navIcon:not(.open):hover span:nth-child(3){
+    transform: rotate(0deg) scaleY(1.1);
+  }
+  .navIcon.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: 13px;
+  }
+  .navIcon.open span:nth-child(2){
+    opacity:0;
+  }
+  .navIcon.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 13px;
+  }
+  .initial{
+    background-color: rgba(21, 21, 21, 0.99);
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all .6s ease ;
+  }
+   
+  .initial.active{
+    border-radius: 0 0 80% 0;
+    top: 0;
+    left: 0;
+    width: 80%;
+    z-index: 2;
+    height: 100vh;
+  }
 
+  .links{
+    position: absolute;
+    top: -700px;
+    left: -2000px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: all .5s ease;
+    }
+    .links.active{
+        height: auto;
+        display: block;
+        position: absolute;
+     
+        top: 90px;
+        left:10px;
+        text-align: left;
+       }
+    .links.active h2{
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    
 .conteiner{
     background-color: rgba(21, 21, 21, 0.99);
     padding-bottom: 20px;
     padding-top: 20px;
     width: 100%;
     margin-left: 0px;
+    margin-right: 0px;
     z-index: 2;
     position: fixed;
     top: 0px;
     border-radius: 12px;
     opacity: inherit;
-    
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
 }
 .about{
-    color: rgb(210, 183, 236);
+    color: #bfbfbf;
     font-family: 'Rubik Glitch', cursive;
-    font-size: 600;
-    display: inline;
-    margin-left: 40px;
-    margin-right: 40px;
-    text-decoration: none;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
     justify-content: left;
-    
+    z-index: 3;
 }
 .about:hover {
     transform: scale(1.03);
     box-shadow: none;
     font-size: 800;
-    color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: #ae00ff;
+
+  }
+
+  @media(min-width: 700px){
+    .links {
+      position: initial;
+      margin: 0;
+      display: flex;
+      text-align: center;
+      justify-content: left;
+      width: 100%;
+      }
+      .navIcon{
+        display: none;
+      }
   }

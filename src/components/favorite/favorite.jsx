@@ -7,7 +7,6 @@ export default function Favorite() {
   const dispatch = useDispatch()
   const charactersFilter =  useSelector(state => state.favorites.filter)
   const handleFilterForGender = (e) =>{
-    console.log(e.target.value)
     dispatch(filterCards(e.target.value))
   }
   const handleFilterForOrder = (e) =>{
@@ -19,20 +18,20 @@ export default function Favorite() {
 
 
    return( 
-  <div>
-  <div>
-  <label htmlFor="cars">Filter your cards:</label>
-   <select onChange={handleFilterForOrder} >
-   <option value={true}>Ascendente</option>
-   <option value={false}>Descendente</option>
+   <>
+  <div className={style.main}>
+  <select onChange={handleFilterForOrder}  className={style.selected} >
+   <option value='Ascendente'>Ascendente</option>
+   <option value='Descendente'>Descendente</option>
    </select>
-   <select  onChange={handleFilterForGender} >
+   <select  onChange={handleFilterForGender}  className={style.selected}>
+   <option value="All">All</option>
    <option value="Male">Male</option>
    <option value="Female">Female</option>
    <option value="Genderless">Genderless</option>
    <option value="unknown">unknown</option>
    </select>
-  </div>
+   </div>
    <div className= {style.conteiner}>
     {
       charactersFilter.map(character =>(
@@ -42,6 +41,6 @@ export default function Favorite() {
         ))
       }
    </div>
-  </div>
+   </>
    );
 }

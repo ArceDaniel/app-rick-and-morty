@@ -13,3 +13,22 @@
     justify-content: space-evenly;
 
 }
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    text-align: start;
+    width: 100%;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    position: fixed;
+    top: 15%;
+    z-index: 1;
+
+}
+.selected{
+    background-color: rgba(21, 21, 21, 0.99);;
+    color: white;
+    font-size: 20px;
+}

@@ -7,6 +7,7 @@ import About from './components/About/About.jsx'
 import Details from './components/Details/Details.jsx'
 import Forms from './components/forms/forms.jsx'
 import Favorite from './components/favorite/favorite';
+import SearchBar from './components/navBar/SearchBar';
 
 
 function App () {
@@ -42,6 +43,8 @@ function App () {
     if (userData.password === password && userData.username === username) {
       setAccess(true);
       navigate("/home");
+    }else{
+      alert('datos invalidos')
     }
   }
 

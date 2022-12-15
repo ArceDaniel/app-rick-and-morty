@@ -1,11 +1,13 @@
 body {
    text-align: center;
+   background-color: black;
    background-image:url('/src/img/fondo.webp');
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-position: center center;
    background-size: cover;
    width: 100%;
+   height: 100%;
    box-sizing: border-box;
    justify-content: center;
    justify-items: center;

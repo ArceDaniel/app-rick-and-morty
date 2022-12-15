@@ -4,7 +4,11 @@
    justify-items: center;
    margin: 0px;
    padding: 0px;
-   margin-top: 130px;
+   margin-top: 6em;
    width: 100%;
 
+}
+#root{
+   padding: 0;
+   margin: 0;
 }

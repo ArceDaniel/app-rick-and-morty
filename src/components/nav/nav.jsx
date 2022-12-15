@@ -1,19 +1,40 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SearchBar from "../navBar/SearchBar";
 import style from './index.module.css'
 
 export default function Nav({onSearch}) {
-    return (
+  const navigate = useNavigate();
+  const [clicked, setClicked] = useState(false)
+  const handleClick = () => {
+    setClicked(!clicked)
+  }
+  const goto = (e)=>{
+    const GO = e.target.innerText || e.target.id
+     navigate(`/${GO}`)
+     setClicked(false)
+  }
+  return (
       <div className={style.conteiner}>
-        <Link to={'/about'} className={style.about}>
-        <h2 className={style.about}>About</h2>
-        </Link>
-        <Link to={'/favorite'} className={style.about}>
-        <h2 className={style.about}>Favorite</h2>
-        </Link>
-        <Link to={'/home'} className={style.about}>
-        <h2 className={style.about}>Home</h2>
-        </Link>
+          <div className={`${style.initial} ${clicked ? style.active : ''}`} />
+           <div className={`${style.navIcon} ${clicked ? style.open : ''}`}
+           onClick={handleClick}>
+           <span></span>
+           <span></span>
+           <span></span>
+        </div>
+        <div className={`${style.links} ${clicked ? style.active : ''}`}>
+        <div className={style.about}>
+        <h2 className={style.about} id='about' onClick={goto}>About</h2>
+        </div>
+        <div className={style.about}>
+        <h2 className={style.about} id='Favorite' onClick={goto}>Favorite</h2>
+        </div>
+        <div className={style.about}>
+        <h2 className={style.about} onClick={goto}>Home</h2>
+        </div>
+        </div>
+     
         <SearchBar onSearch={onSearch} />
       </div>
     );

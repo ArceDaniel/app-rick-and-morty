@@ -2,15 +2,10 @@
   "extends": [
     "development"
   ],
-  "hints": {
-    "compat-api/css": [
-      "default",
-      {
-        "ignore": [
-          "inset",
-          "backdrop-filter"
-        ]
-      }
-    ]
-  }
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 14.4",
+    "not safari <= 13.1"
+  ]
 }

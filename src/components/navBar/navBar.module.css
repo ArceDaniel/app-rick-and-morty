@@ -1,8 +1,11 @@
 .conteiner{
-    padding-top: 20px;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    justify-content:flex-end;
 }
 .button {
-    width: 130px;
+    width: 7em;
     height: 40px;
     z-index: 1;
     font-size: 14px;
@@ -107,8 +110,8 @@
     border-radius: 20px;
     padding: 10px 25px;
     background: transparent;
-    max-width: 190px;
-    margin-right: 1em;
+    width: 9em;
+
     height: 16px;
    }
 
@@ -117,3 +120,14 @@
     box-shadow: 2px 2px 15px #8707ff inset;
    }
    
+@media (max-width: 370px) {
+    .conteiner{
+        justify-content: center;
+    }
+   .input{
+    width: 7em;
+    }
+    .button{
+    width: 6em;
+    }
+}
