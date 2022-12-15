@@ -16,7 +16,6 @@ export default function Card({data, onClose }) {
      myFavorites.forEach((fav) => {
         if (fav.id === data.id) {
            setIsFav(true);
-           console.log(myFavorites)
         }
      });
   }, [myFavorites]);
@@ -26,7 +25,6 @@ export default function Card({data, onClose }) {
        setIsFav(false)
        dispatch(removeFavorite(data))
     } else {
-      console.log("si")
        setIsFav(true)
        dispatch(addFavorite(data))
     }

@@ -7,7 +7,6 @@ import About from './components/About/About.jsx'
 import Details from './components/Details/Details.jsx'
 import Forms from './components/forms/forms.jsx'
 import Favorite from './components/favorite/favorite';
-import SearchBar from './components/navBar/SearchBar';
 
 
 function App () {
@@ -32,8 +31,7 @@ function App () {
     setCharacters(characters.filter((char) => char.id !== id));
   };
   const location = useLocation();
-  //location = { pathname: url }
-
+ 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
   const username = "example@gmail.com";

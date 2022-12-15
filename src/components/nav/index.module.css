@@ -7,7 +7,6 @@
     cursor: pointer;
     display: inline-block;
     justify-items: center;
-    z-index: 3;
   }
   .navIcon span{
     background-color:#878787;
@@ -104,7 +103,7 @@
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 0px;
     border-radius: 12px;

@@ -9,10 +9,8 @@ export default function Favorite() {
   const handleFilterForGender = (e) =>{
     dispatch(filterCards(e.target.value))
   }
-  const handleFilterForOrder = (e) =>{
-    console.log(e.target.value)
-    dispatch(orderCards(e.target.value))
-  }
+  const handleFilterForOrder = (e) => dispatch(orderCards(e.target.value));
+  
 
 
 
