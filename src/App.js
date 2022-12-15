@@ -14,7 +14,7 @@ function App () {
   const [characters, setCharacters] = useState([]);
 
   const onSearch = async (id) =>{
-      fetch(`https://rickandmortyapi.com/api/character/${id}`)
+      await fetch(`https://rickandmortyapi.com/api/character/${id}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.name) {
