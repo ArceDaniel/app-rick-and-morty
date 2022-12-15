@@ -32,7 +32,7 @@ export default function About(){
           <a href='https://www.linkedin.com/in/jonathandanielarce/' 
           className={style.iconLikedin}></a>
           <a href='https://github.com/ArceDaniel' className={style.iconGit}></a>
-          <a href='./img/cv.pdf' download className={style.iconCv}></a>
+          <a href='./cv.pdf' download className={style.iconCv}></a>
           </div>
     </div>
     )
